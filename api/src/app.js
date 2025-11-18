@@ -18,6 +18,7 @@ const requireAdmin = async function miMidelware(req, res, next) {
     if (role == 'admin') {
       next()
     }
+    
     else {
       res.status(403).send('Forbidden')
 
