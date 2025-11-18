@@ -29,18 +29,18 @@ app.post('/api/users', async (req, res) => {
     }
 
       const [results, fields] = await connection.query( // ponemos la promesa --> async-wait
-        'INSERT INTO pesonas (name, password, role) VALUES (?,?,?)',
+        'INSERT INTO `personas` (name, password, role) VALUES (?,?,?)',
         [name, password, role]
       );
 
-      if (results[0].affectedRows == 1) {
+      if (results.affectedRows === 1) {
         console.log(results); // results contains rows returned by server
         // res.json(results)
         res.status(200).send("Usuari insertat correctment");
       }
     }
   } catch (err) {
-    res.status(500).send("Error : ${err}");
+    res.status(500).send(`Error : ${err}`);
   }
 
 })

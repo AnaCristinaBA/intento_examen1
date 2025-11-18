@@ -10,3 +10,7 @@ npm install express
 npm install --save-dev nodemon
 npm install --save mysql2
 npm run start
+
+pasar jdk mediante el post
+pasarlo al user
+borrar cuando cierra sesión
