@@ -5,7 +5,7 @@
   "type":"module",
   "main": "api/src/app.js",
   "scripts": {
-    "start" : "nodemon api/src/app.js"
+    "dev" : "nodemon api/src/app.js"
   },
   "author": "anna",
   "license": "ISC",
