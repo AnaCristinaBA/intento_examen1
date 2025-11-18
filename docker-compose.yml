@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_app
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: users
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/bbdd.sql:/docker-entrypoint-initdb.d/bbdd.sql
+volumes:
+  mysql_data:
