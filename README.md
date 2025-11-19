@@ -2,7 +2,7 @@
 docker compose up -d
 docker exec -it mysql_app mysql -u root -p
 mysql -u root -p
-comprobar si ni han databases i taules
+comprovar si hi han databases i taules
 
 # npm
 npm init
